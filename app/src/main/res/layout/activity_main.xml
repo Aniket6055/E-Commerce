@@ -5,8 +5,9 @@
 		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
+		android:animateLayoutChanges="true"
 		android:background="@color/colorPrimary"
-		tools:context=".view.activities.MainActivity">
+		tools:context=".view.activities.LoginSignUp">
 	
 	<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
 			android:layout_width="match_parent"
@@ -18,6 +19,7 @@
 			android:textSize="@dimen/size_25_dp"/>
 	
 	<LinearLayout
+			android:animateLayoutChanges="true"
 			android:id="@+id/linearMain"
 			android:background="@drawable/login_layout_back"
 			android:layout_centerInParent="true"
@@ -224,6 +226,7 @@
 	
 	
 	<RelativeLayout
+			android:id="@+id/relativeFacebook"
 			android:layout_below="@+id/tvOr"
 			android:layout_marginRight="@dimen/size_25_dp"
 			android:layout_marginLeft="@dimen/size_25_dp"
@@ -249,7 +252,7 @@
 	<com.demo.ecommerceapp.view.customviews.textview.LatoRegularTextView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:id="@+id/tvhaveAccount"
+			android:id="@+id/tvHaveAccount"
 			android:textColor="@color/white"
 			android:textSize="@dimen/size_14_sp"
 			android:layout_alignParentBottom="true"
