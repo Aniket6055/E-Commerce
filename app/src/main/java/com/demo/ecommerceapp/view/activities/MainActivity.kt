@@ -1,7 +1,8 @@
-package com.demo.ecommerceapp
+package com.demo.ecommerceapp.view.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.demo.ecommerceapp.R
 
 class MainActivity : AppCompatActivity() {
 

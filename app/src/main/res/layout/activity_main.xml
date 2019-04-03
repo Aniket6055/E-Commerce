@@ -1,19 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/colorPrimary"
+		tools:context=".view.activities.MainActivity">
+	
+	<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/str_create_account"
+			android:gravity="center"
+			android:layout_above="@+id/linearMain"
+			android:textColor="@color/white"
+			android:textSize="@dimen/size_25_dp"/>
+	
+	<LinearLayout
+			android:id="@+id/linearMain"
+			android:background="@drawable/login_layout_back"
+			android:layout_centerInParent="true"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/size_25_dp"
+			android:layout_marginRight="@dimen/size_25_dp"
+			android:layout_marginTop="@dimen/size_25_dp"
+			android:layout_marginBottom="@dimen/size_15_dp"
+			android:orientation="vertical">
+		
+		
+		<RelativeLayout
+				android:id="@+id/usernameRelative"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/size_10_dp"
+				android:paddingBottom="@dimen/size_10_dp"
+				android:paddingLeft="@dimen/size_15_dp"
+				android:paddingRight="@dimen/size_15_dp"
+				android:orientation="horizontal">
+			
+			<com.demo.ecommerceapp.view.customviews.textview.LatoBoldtextView
+					android:id="@+id/tvUsernameHint"
+					android:layout_width="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:layout_height="wrap_content"
+					android:textColor="@color/black"
+					android:textSize="@dimen/size_16_dp"
+					android:text="@string/str_username"/>
+			
+			<com.demo.ecommerceapp.view.customviews.editetxt.LatoSemiBoldEditText
+					android:layout_toRightOf="@+id/tvUsernameHint"
+					android:layout_alignParentRight="true"
+					android:layout_marginLeft="@dimen/size_10_dp"
+					android:layout_width="wrap_content"
+					android:minWidth="120dp"
+					android:hint="Username"
+					android:gravity="end"
+					android:textSize="@dimen/size_16_sp"
+					android:paddingRight="@dimen/size_5_dp"
+					android:background="@drawable/blank_et_back"
+					android:layout_height="wrap_content"/>
+		
+		</RelativeLayout>
+		
+		<View
+				android:id="@+id/divideView1"
+				android:layout_below="@+id/usernameRelative"
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"
+				android:layout_marginLeft="@dimen/size_15_dp"
+				android:layout_marginRight="@dimen/size_15_dp"
+				android:background="@color/grey"
+				/>
+		
+		
+		<RelativeLayout
+				android:id="@+id/emailRelative"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/size_10_dp"
+				android:paddingBottom="@dimen/size_10_dp"
+				android:paddingLeft="@dimen/size_15_dp"
+				android:paddingRight="@dimen/size_15_dp"
+				android:orientation="horizontal">
+			
+			<com.demo.ecommerceapp.view.customviews.textview.LatoBoldtextView
+					android:id="@+id/tvEmailHint"
+					android:layout_width="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:layout_height="wrap_content"
+					android:textColor="@color/black"
+					android:textSize="@dimen/size_16_dp"
+					android:text="@string/str_email"/>
+			
+			<com.demo.ecommerceapp.view.customviews.editetxt.LatoSemiBoldEditText
+					android:layout_toRightOf="@+id/tvEmailHint"
+					android:layout_alignParentRight="true"
+					android:layout_marginLeft="@dimen/size_10_dp"
+					android:layout_width="wrap_content"
+					android:minWidth="120dp"
+					android:hint="@string/str_email"
+					android:gravity="end"
+					android:textSize="@dimen/size_16_sp"
+					android:paddingRight="@dimen/size_5_dp"
+					android:background="@drawable/blank_et_back"
+					android:layout_height="wrap_content"/>
+		
+		</RelativeLayout>
+		
+		<View
+				android:id="@+id/divideView2"
+				android:layout_below="@+id/emailRelative"
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"
+				android:layout_marginLeft="@dimen/size_15_dp"
+				android:layout_marginRight="@dimen/size_15_dp"
+				android:background="@color/grey"
+				/>
+		
+		<RelativeLayout
+				android:id="@+id/phoneRelative"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/size_10_dp"
+				android:paddingBottom="@dimen/size_10_dp"
+				android:paddingLeft="@dimen/size_15_dp"
+				android:paddingRight="@dimen/size_15_dp"
+				android:orientation="horizontal">
+			
+			<com.demo.ecommerceapp.view.customviews.textview.LatoBoldtextView
+					android:id="@+id/tvPhoneHint"
+					android:layout_width="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:layout_height="wrap_content"
+					android:textColor="@color/black"
+					android:textSize="@dimen/size_16_dp"
+					android:text="@string/str_phone"/>
+			
+			<com.demo.ecommerceapp.view.customviews.editetxt.LatoSemiBoldEditText
+					android:layout_toRightOf="@+id/tvPhoneHint"
+					android:layout_alignParentRight="true"
+					android:layout_marginLeft="@dimen/size_10_dp"
+					android:layout_width="wrap_content"
+					android:minWidth="120dp"
+					android:hint="@string/str_phone"
+					android:gravity="end"
+					android:textSize="@dimen/size_16_sp"
+					android:paddingRight="@dimen/size_5_dp"
+					android:background="@drawable/blank_et_back"
+					android:layout_height="wrap_content"/>
+		
+		</RelativeLayout>
+		
+		
+		<View
+				android:id="@+id/divideView3"
+				android:layout_below="@+id/phoneRelative"
+				android:layout_width="match_parent"
+				android:layout_height="0.5dp"
+				android:layout_marginLeft="@dimen/size_15_dp"
+				android:layout_marginRight="@dimen/size_15_dp"
+				android:background="@color/grey"
+				/>
+		
+		
+		<RelativeLayout
+				android:id="@+id/passwordRelative"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingTop="@dimen/size_10_dp"
+				android:paddingBottom="@dimen/size_10_dp"
+				android:paddingLeft="@dimen/size_15_dp"
+				android:paddingRight="@dimen/size_15_dp"
+				android:orientation="horizontal">
+			
+			<com.demo.ecommerceapp.view.customviews.textview.LatoBoldtextView
+					android:id="@+id/tvPasswordHint"
+					android:layout_width="wrap_content"
+					android:layout_alignParentLeft="true"
+					android:layout_height="wrap_content"
+					android:textColor="@color/black"
+					android:textSize="@dimen/size_16_dp"
+					android:text="@string/str_password"/>
+			
+			<com.demo.ecommerceapp.view.customviews.editetxt.LatoSemiBoldEditText
+					android:layout_toRightOf="@+id/tvPasswordHint"
+					android:layout_alignParentRight="true"
+					android:layout_marginLeft="@dimen/size_10_dp"
+					android:layout_width="wrap_content"
+					android:minWidth="120dp"
+					android:hint="@string/str_password"
+					android:gravity="end"
+					android:textSize="@dimen/size_16_sp"
+					android:paddingRight="@dimen/size_5_dp"
+					android:background="@drawable/blank_et_back"
+					android:layout_height="wrap_content"/>
+		
+		</RelativeLayout>
+		
+		<Button
+				android:id="@+id/btnSignUp"
+				android:background="@drawable/btn_black_back"
+				android:layout_width="match_parent"
+				android:textSize="@dimen/size_14_sp"
+				android:text="Create Account"
+				android:textColor="@color/white"
+				android:textAllCaps="false"
+				android:layout_height="wrap_content"/>
+	
+	</LinearLayout>
+	
+	
+	<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+			android:id="@+id/tvOr"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Or"
+			android:layout_below="@+id/linearMain"
+			android:gravity="center"
+			android:textColor="@color/white"
+			android:textSize="@dimen/size_16_sp"/>
+	
+	
+	<RelativeLayout
+			android:layout_below="@+id/tvOr"
+			android:layout_marginRight="@dimen/size_25_dp"
+			android:layout_marginLeft="@dimen/size_25_dp"
+			android:layout_marginTop="@dimen/size_15_dp"
+			android:padding="@dimen/size_10_dp"
+			android:layout_width="match_parent"
+			android:gravity="center"
+			android:background="@drawable/fb_layout_back"
+			android:layout_height="wrap_content">
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoMediumTextView
+				android:layout_width="wrap_content"
+				android:drawableLeft="@drawable/facebook"
+				android:text="Connect with facebook"
+				android:textColor="@color/white"
+				android:drawablePadding="10dp"
+				android:textSize="@dimen/size_16_sp"
+				android:layout_height="wrap_content"/>
+	
+	</RelativeLayout>
+	
+	
+	<com.demo.ecommerceapp.view.customviews.textview.LatoRegularTextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/tvhaveAccount"
+			android:textColor="@color/white"
+			android:textSize="@dimen/size_14_sp"
+			android:layout_alignParentBottom="true"
+			android:gravity="center"
+			android:layout_marginBottom="30dp"
+			android:text="Already have an account? Sign In"/>
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
