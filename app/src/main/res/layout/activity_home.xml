@@ -20,7 +20,57 @@
 			android:layout_height="match_parent"
 			android:layout_gravity="start"
 			android:fitsSystemWindows="true"
-			app:headerLayout="@layout/nav_header_home"
-			app:menu="@menu/activity_home_drawer"/>
+			app:headerLayout="@layout/nav_header_home">
+		
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+			
+			<ExpandableListView
+					android:id="@+id/expandableListView"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/nav_header_height"
+					android:background="@android:color/white"
+					android:dividerHeight="0dp"
+					android:groupIndicator="@null"/>
+			
+			
+			<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+					android:layout_width="match_parent"
+					android:layout_height="?attr/listPreferredItemHeightSmall"
+					android:gravity="center_vertical"
+					android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+					android:paddingRight="?attr/listPreferredItemPaddingRight"
+					android:textColor="@color/black"
+					android:text="AAA"
+					android:textSize="16sp"/>
+			
+			<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+					android:layout_width="match_parent"
+					android:layout_height="?attr/listPreferredItemHeightSmall"
+					android:gravity="center_vertical"
+					android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+					android:paddingRight="?attr/listPreferredItemPaddingRight"
+					android:textColor="@color/black"
+					android:text="BBB"
+					android:textSize="16sp"/>
+			
+			<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+					android:layout_width="match_parent"
+					android:layout_height="?attr/listPreferredItemHeightSmall"
+					android:gravity="center_vertical"
+					android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+					android:paddingRight="?attr/listPreferredItemPaddingRight"
+					android:textColor="@color/black"
+					android:text="CCC"
+					android:textSize="16sp"/>
+		
+		
+		</LinearLayout>
+	
+	
+	</com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

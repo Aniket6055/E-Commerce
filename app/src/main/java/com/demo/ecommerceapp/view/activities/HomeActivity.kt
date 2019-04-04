@@ -1,24 +1,30 @@
 package com.demo.ecommerceapp.view.activities
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.core.view.GravityCompat
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.demo.ecommerceapp.R
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.app_bar_home.*
+import android.widget.ExpandableListView
+import android.widget.Toast
+import com.demo.ecommerceapp.R
+import com.demo.ecommerceapp.view.adapters.ExpandableListAdapter
+
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    var expandableListAdapter: ExpandableListAdapter? = null
+    var headerList: List<String> = ArrayList()
+    var childList: HashMap<String, List<String>> = HashMap()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(toolbar)
-
 
 
         val toggle = ActionBarDrawerToggle(
@@ -28,6 +34,9 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        populateCategories()
+        populateExpandableList()
     }
 
     override fun onBackPressed() {
@@ -80,4 +89,27 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
+
+
+    fun populateCategories(): Unit {
+        headerList = listOf("A", "B", "C", "D")
+        childList.put("A", headerList)
+        childList.put("B", headerList)
+        childList.put("C", headerList)
+        childList.put("D", headerList)
+    }
+
+
+    fun populateExpandableList() {
+        expandableListAdapter = ExpandableListAdapter(this, headerList, childList)
+        expandableListView.setAdapter(expandableListAdapter)
+
+        expandableListView.setOnChildClickListener(ExpandableListView.OnChildClickListener { parent, view, groupPosition, childPosition, id ->
+            Boolean
+            Toast.makeText(this, childList[headerList[groupPosition]]!![childPosition], Toast.LENGTH_LONG)
+                .show()
+            return@OnChildClickListener false
+        })
+    }
+
 }
