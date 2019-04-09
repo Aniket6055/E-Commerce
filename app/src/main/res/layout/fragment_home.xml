@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.fragments.HomeFragment">
+	
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+		
+		
+		<androidx.viewpager.widget.ViewPager
+				android:id="@+id/vpBanner"
+				android:layout_width="match_parent"
+				android:layout_height="200dp"/>
+		
+		<com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+				android:layout_centerHorizontal="true"
+				android:layout_below="@+id/vpBanner"
+				android:layout_marginTop="-25dp"
+				android:id="@+id/dotIndicator"
+				android:layout_width="wrap_content"
+				android:layout_height="@dimen/size_15_dp"
+				app:dotsColor="@color/colorAccent"
+				app:dotsCornerRadius="@dimen/size_5_dp"
+				app:dotsSize="@dimen/size_10_dp"
+				app:dotsSpacing="4dp"
+				app:dotsWidthFactor="1.5"
+				app:selectedDotColor="@color/colorAccent"
+				app:progressMode="true"
+				/>
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="ABC"
+				android:id="@+id/trendMobileHeader"
+				android:textSize="@dimen/size_16_sp"
+				android:paddingLeft="@dimen/size_10_dp"
+				android:paddingBottom="@dimen/size_10_dp"
+				android:paddingTop="@dimen/size_10_dp"
+				android:textColor="@color/black"
+				android:layout_below="@+id/vpBanner"/>
+		
+		<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/vrTrendMobile"
+				android:layout_below="@+id/trendMobileHeader"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="ABC"
+				android:id="@+id/trendElectronicsHeader"
+				android:textSize="@dimen/size_16_sp"
+				android:paddingLeft="@dimen/size_10_dp"
+				android:paddingBottom="@dimen/size_10_dp"
+				android:paddingTop="@dimen/size_10_dp"
+				android:textColor="@color/black"
+				android:layout_below="@+id/vrTrendMobile"/>
+		
+		<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/vrTrendElectronics"
+				android:layout_below="@+id/trendElectronicsHeader"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+	
+	
+	</RelativeLayout>
+
+
+</ScrollView>

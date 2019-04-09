@@ -11,8 +11,10 @@ import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.app_bar_home.*
 import android.widget.ExpandableListView
 import android.widget.Toast
+import androidx.fragment.app.FragmentTransaction
 import com.demo.ecommerceapp.R
 import com.demo.ecommerceapp.view.adapters.ExpandableListAdapter
+import com.demo.ecommerceapp.view.fragments.HomeFragment
 
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -37,6 +39,14 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         populateCategories()
         populateExpandableList()
+        addHomeFragment()
+    }
+
+    private fun addHomeFragment() {
+        var homeFragment = HomeFragment()
+        var fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.mainContent, homeFragment)
+        fragmentTransaction.commit()
     }
 
     override fun onBackPressed() {
