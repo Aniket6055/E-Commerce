@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:id="@+id/mainLayout"
+              android:layout_height="wrap_content">
+	
+	
+	<ImageView
+			android:id="@+id/productImage"
+			android:layout_width="150dp"
+			android:layout_height="100dp"
+			android:src="@drawable/phone"/>
+	
+	<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+			android:id="@+id/productName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="i phone X"
+			android:textSize="@dimen/size_16_sp"
+			android:gravity="center"
+			android:layout_marginTop="@dimen/size_10_dp"
+			android:layout_marginBottom="@dimen/size_10_dp"
+			android:textColor="@color/black"/>
+
+</LinearLayout>

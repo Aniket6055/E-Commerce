@@ -7,14 +7,17 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.app_bar_home.*
 import android.widget.ExpandableListView
 import android.widget.Toast
 import androidx.fragment.app.FragmentTransaction
-import com.demo.ecommerceapp.R
 import com.demo.ecommerceapp.view.adapters.ExpandableListAdapter
 import com.demo.ecommerceapp.view.fragments.HomeFragment
+import android.widget.TextView
+import com.demo.ecommerceapp.R
+import androidx.core.view.MenuItemCompat
 
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -22,6 +25,8 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     var expandableListAdapter: ExpandableListAdapter? = null
     var headerList: List<String> = ArrayList()
     var childList: HashMap<String, List<String>> = HashMap()
+    var textCartItemCount: TextView? = null
+    var mCartItemCount = 10
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +65,33 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.home, menu)
+
+        val menuItem = menu.findItem(R.id.action_cart)
+
+        val actionView = MenuItemCompat.getActionView(menuItem)
+        textCartItemCount = actionView.findViewById(R.id.cart_badge) as TextView
+
+        setupBadge()
+
+        actionView.setOnClickListener { onOptionsItemSelected(menuItem) }
         return true
+    }
+
+
+    private fun setupBadge() {
+
+        if (textCartItemCount != null) {
+            if (mCartItemCount === 0) {
+                if (textCartItemCount!!.visibility!== View.GONE) {
+                    textCartItemCount!!.visibility = View.GONE
+                }
+            } else {
+                textCartItemCount!!.text = Math.min(mCartItemCount, 99).toString()
+                if (textCartItemCount!!.visibility !== View.VISIBLE) {
+                    textCartItemCount!!.visibility = View.VISIBLE
+                }
+            }
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -68,7 +99,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
-            R.id.action_settings -> return true
+            R.id.action_cart -> return true
             else -> return super.onOptionsItemSelected(item)
         }
     }

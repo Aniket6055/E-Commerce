@@ -1,19 +1,19 @@
 package com.demo.ecommerceapp.view.fragments
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
-
 import com.demo.ecommerceapp.R
 import com.demo.ecommerceapp.view.adapters.BannerPagerAdapter
+import com.demo.ecommerceapp.view.adapters.CommonRVAdapter
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-import android.os.Handler
 import java.util.*
 
 
@@ -42,7 +42,6 @@ class HomeFragment : Fragment() {
     lateinit var dotsIndicator: DotsIndicator
     var NUM_PAGES: Int = 0
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -55,8 +54,46 @@ class HomeFragment : Fragment() {
         bannerAdapter = BannerPagerAdapter(activity!!.baseContext, images)
         vpBanner.adapter = bannerAdapter
         dotsIndicator.setViewPager(vpBanner)
-//        startAutoScrollForViewPager()
+
+        setUpTrendingPhones(view)
+        setupTrendingElectronics(view)
+        setupBestOffers(view)
+        startAutoScrollForViewPager()
         return view
+    }
+
+    private fun setupBestOffers(view: View) {
+
+        val rvBestOffers = view.findViewById<RecyclerView>(R.id.rvBestOffers)
+        val layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, true)
+        layoutManager.reverseLayout = false
+        rvBestOffers.layoutManager = layoutManager
+        rvBestOffers.adapter = CommonRVAdapter(getProducts(), activity!!.baseContext)
+        rvBestOffers.isNestedScrollingEnabled = true
+    }
+
+    private fun setupTrendingElectronics(view: View) {
+        val rvTrendElectronics = view.findViewById<RecyclerView>(R.id.rvTrendElectronics)
+        val layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, true)
+        layoutManager.reverseLayout = false
+        rvTrendElectronics.layoutManager = layoutManager
+        rvTrendElectronics.adapter = CommonRVAdapter(getProducts(), activity!!.baseContext)
+        rvTrendElectronics.isNestedScrollingEnabled = true
+
+    }
+
+    private fun setUpTrendingPhones(view: View) {
+        val rvTrendMobile = view.findViewById<RecyclerView>(R.id.rvTrendMobile)
+        val layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, true)
+        layoutManager.reverseLayout = false
+        rvTrendMobile.layoutManager = layoutManager
+        rvTrendMobile.adapter = CommonRVAdapter(getProducts(), activity!!.baseContext)
+        rvTrendMobile.isNestedScrollingEnabled = true
+
+    }
+
+    private fun getProducts(): List<String> {
+        return listOf("AA", "BB", "CC", "DD", "EE")
     }
 
     var currentPage = 0

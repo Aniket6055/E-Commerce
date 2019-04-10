@@ -44,6 +44,8 @@
 					android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
 					android:paddingRight="?attr/listPreferredItemPaddingRight"
 					android:textColor="@color/black"
+					android:background="?attr/selectableItemBackground"
+					android:clickable="true"
 					android:text="AAA"
 					android:textSize="16sp"/>
 			
@@ -54,6 +56,8 @@
 					android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
 					android:paddingRight="?attr/listPreferredItemPaddingRight"
 					android:textColor="@color/black"
+					android:background="?attr/selectableItemBackground"
+					android:clickable="true"
 					android:text="BBB"
 					android:textSize="16sp"/>
 			
@@ -65,6 +69,8 @@
 					android:paddingRight="?attr/listPreferredItemPaddingRight"
 					android:textColor="@color/black"
 					android:text="CCC"
+					android:background="?attr/selectableItemBackground"
+					android:clickable="true"
 					android:textSize="16sp"/>
 		
 		
