@@ -18,6 +18,7 @@ import com.demo.ecommerceapp.view.fragments.HomeFragment
 import android.widget.TextView
 import com.demo.ecommerceapp.R
 import androidx.core.view.MenuItemCompat
+import com.demo.ecommerceapp.view.fragments.ListingFragment
 
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -48,7 +49,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun addHomeFragment() {
-        var homeFragment = HomeFragment()
+        var homeFragment = ListingFragment()
         var fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.mainContent, homeFragment)
         fragmentTransaction.commit()
@@ -82,7 +83,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         if (textCartItemCount != null) {
             if (mCartItemCount === 0) {
-                if (textCartItemCount!!.visibility!== View.GONE) {
+                if (textCartItemCount!!.visibility !== View.GONE) {
                     textCartItemCount!!.visibility = View.GONE
                 }
             } else {

@@ -37,4 +37,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
 
+
+
 }

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/listingItemMainLayout">
+	
+	<ImageView
+			android:layout_width="120dp"
+			android:layout_height="120dp"
+			android:id="@+id/listProductImage"
+			tools:srcCompat="@drawable/phone"
+			android:layout_marginTop="16dp"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginStart="16dp"/>
+	
+	<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+			android:text="TextView"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/listingProductName"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_marginEnd="8dp"
+			android:textSize="@dimen/size_20_sp"
+			app:layout_constraintStart_toEndOf="@+id/listProductImage"
+			android:layout_marginStart="16dp"
+			android:layout_marginTop="28dp"
+			android:textColor="@color/black"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintHorizontal_bias="0.484"/>
+	
+	<com.demo.ecommerceapp.view.customviews.textview.LatoBoldtextView
+			android:text="TextView"
+			android:textSize="@dimen/size_16_sp"
+			android:textColor="@color/black"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/listingProductPrice"
+			app:layout_constraintStart_toEndOf="@+id/listProductImage"
+			android:layout_marginStart="16dp"
+			android:layout_marginTop="@dimen/size_10_dp"
+			app:layout_constraintTop_toBottomOf="@+id/listingProductName"/>
+	
+	<com.demo.ecommerceapp.view.customviews.textview.LatoRegularTextView
+			android:text="TextView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/listingProductOffer"
+			android:textSize="@dimen/size_12_sp"
+			app:layout_constraintStart_toEndOf="@+id/listingProductPrice"
+			android:layout_marginStart="8dp"
+			app:layout_constraintTop_toTopOf="@+id/listingProductPrice"
+			app:layout_constraintBottom_toBottomOf="@+id/listingProductPrice"/>
+	
+	<com.demo.ecommerceapp.view.customviews.textview.LatoSemiboldTextView
+			android:text="TextView"
+			android:textSize="@dimen/size_12_sp"
+			android:textColor="@color/white"
+			android:gravity="center"
+			android:padding="@dimen/size_5_dp"
+			android:drawableRight="@drawable/ic_star_12dp"
+			android:drawablePadding="@dimen/size_5_dp"
+			android:background="@drawable/tv_rating_back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/listingProductRating"
+			android:layout_marginTop="8dp"
+			app:layout_constraintTop_toBottomOf="@+id/listingProductPrice"
+			app:layout_constraintStart_toEndOf="@+id/listProductImage"
+			android:layout_marginStart="16dp"/>
+	
+	<com.demo.ecommerceapp.view.customviews.textview.LatoRegularTextView
+			android:text="TextView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/listingProductRatingCount"
+			app:layout_constraintStart_toEndOf="@+id/listingProductRating"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_marginEnd="8dp"
+			app:layout_constraintHorizontal_bias="0.029"
+			app:layout_constraintBottom_toBottomOf="@+id/listingProductRating"
+			app:layout_constraintTop_toTopOf="@+id/listingProductRating"/>
+	
+	<com.demo.ecommerceapp.view.customviews.TagView
+			android:id="@+id/listingProductspecs"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			app:text_background="@drawable/custom_back"
+			app:line_padding="5"
+			android:layout_marginTop="8dp"
+			app:layout_constraintTop_toBottomOf="@+id/listProductImage"
+			android:layout_marginStart="16dp"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginEnd="16dp"
+			app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="LaybelLayout">
+		<attr name="line_padding" format="integer"/>
+		<attr name="text_background" format="reference"/><!-- TextView的背景 -->
+		<attr name="child_margin" format="integer"/><!-- 子View的外边距 -->
+	</declare-styleable>
+</resources>
