@@ -38,5 +38,4 @@ dependencies {
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
 
 
-
 }

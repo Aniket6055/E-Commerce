@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+		tools:showIn="@layout/activity_product"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".view.activities.ProductActivity">
+	
+	<RelativeLayout
+			android:id="@+id/mainConstraintLayout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoBoldtextView
+				android:id="@+id/tvProductName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="I phone X"
+				android:textSize="22dp"
+				android:textColor="@color/black"
+				android:layout_marginTop="@dimen/size_10_dp"
+				android:layout_marginLeft="@dimen/size_16_dp"
+				android:layout_marginRight="@dimen/size_16_dp"
+				android:layout_marginBottom="@dimen/size_10_dp"/>
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:id="@+id/tvProductPrice"
+				android:layout_below="@+id/tvProductName"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="₹  94,000"
+				android:textSize="22dp"
+				android:textColor="@color/black"
+				android:layout_marginLeft="@dimen/size_16_dp"
+				android:layout_marginRight="@dimen/size_16_dp"
+				android:layout_marginBottom="@dimen/size_10_dp"/>
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoRegularTextView
+				android:id="@+id/tvProductOffer"
+				android:text="56% off"
+				android:textColor="@color/colorAccent"
+				android:textSize="@dimen/size_16_sp"
+				android:layout_toRightOf="@+id/tvProductPrice"
+				android:layout_below="@+id/tvProductName"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/size_5_dp"
+				android:layout_marginTop="5dp"/>
+		
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoSemiboldTextView
+				android:text="4.6"
+				android:textSize="@dimen/size_14_sp"
+				android:textColor="@color/white"
+				android:gravity="center"
+				android:padding="@dimen/size_5_dp"
+				android:layout_below="@+id/tvProductPrice"
+				android:drawableRight="@drawable/ic_star_12dp"
+				android:drawablePadding="@dimen/size_5_dp"
+				android:background="@drawable/tv_rating_back"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/tvProductRating"
+				android:layout_marginStart="16dp"/>
+		
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoRegularTextView
+				android:text="223 Ratings and 54 reviews"
+				android:layout_width="wrap_content"
+				android:layout_below="@+id/tvProductPrice"
+				android:layout_marginLeft="@dimen/size_10_dp"
+				android:layout_marginTop="@dimen/size_5_dp"
+				android:layout_toRightOf="@+id/tvProductRating"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/size_14_dp"
+				android:id="@+id/listingProductRatingCount"/>
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:id="@+id/tvHurry"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Hurry only few left"
+				android:textColor="@android:color/holo_red_dark"
+				android:layout_below="@+id/tvProductRating"
+				android:layout_marginTop="@dimen/size_10_dp"
+				android:layout_marginLeft="@dimen/size_16_dp"/>
+		
+		
+		<View
+				android:id="@+id/seperator1"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/grey"
+				android:layout_marginTop="@dimen/size_20_dp"
+				android:layout_below="@+id/tvHurry"/>
+		
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:id="@+id/tvSpecsHeading"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Specification"
+				android:textColor="@android:color/black"
+				android:layout_below="@+id/seperator1"
+				android:layout_marginTop="@dimen/size_10_dp"
+				android:layout_marginLeft="@dimen/size_16_dp"/>
+		
+		
+		<WebView
+				android:id="@+id/specsWebView"
+				android:layout_marginTop="@dimen/size_10_dp"
+				android:layout_below="@+id/tvSpecsHeading"
+				android:layout_width="match_parent"
+				android:layout_height="200dp"/>
+		
+		
+		<LinearLayout
+				android:id="@+id/btnLayout"
+				android:layout_below="@+id/specsWebView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+			
+			<Button
+					android:layout_weight="1"
+					android:id="@+id/btnAddToCart"
+					android:text="Add to cart"
+					android:textAllCaps="false"
+					android:background="@drawable/btn_back"
+					android:textColor="@color/black"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+			
+			<Button
+					android:layout_weight="1"
+					android:id="@+id/btnBuyNow"
+					android:text="Buy now"
+					android:textAllCaps="false"
+					android:textColor="@color/white"
+					android:background="@drawable/btn_background"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+		
+		</LinearLayout>
+		
+		<RelativeLayout
+				android:id="@+id/similarLayout"
+				android:layout_below="@+id/btnLayout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+			
+			<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="ABC"
+					android:id="@+id/trendElectronicsHeader"
+					android:textSize="@dimen/size_16_sp"
+					android:paddingLeft="@dimen/size_16_dp"
+					android:paddingBottom="@dimen/size_10_dp"
+					android:paddingTop="@dimen/size_10_dp"
+					android:textColor="@color/black"/>
+			
+			<com.demo.ecommerceapp.view.customviews.textview.LatoSemiboldTextView
+					android:id="@+id/trendingElectronicsSeemore"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:textSize="@dimen/size_14_sp"
+					android:layout_marginRight="16dp"
+					android:paddingLeft="@dimen/size_10_dp"
+					android:paddingBottom="@dimen/size_10_dp"
+					android:paddingTop="@dimen/size_10_dp"
+					android:text="See more"/>
+		</RelativeLayout>
+		
+		
+		<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/rvSimilarProducts"
+				app:layout_behavior="@string/appbar_scrolling_view_behavior"
+				android:layout_below="@+id/similarLayout"
+				android:layout_width="wrap_content"
+				android:layout_marginBottom="@dimen/size_10_dp"
+				android:layout_height="wrap_content"/>
+	
+	
+	</RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

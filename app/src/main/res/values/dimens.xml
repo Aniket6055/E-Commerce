@@ -20,5 +20,9 @@
 	<dimen name="size_12_sp">12sp</dimen>
 	<dimen name="size_20_sp">20sp</dimen>
 	<dimen name="size_10_sp">10sp</dimen>
+	<dimen name="app_bar_height">300dp</dimen>
+	<dimen name="text_margin">16dp</dimen>
+	<dimen name="size_14_dp">14dp</dimen>
+	<dimen name="size_20_dp">20dp</dimen>
 
 </resources>

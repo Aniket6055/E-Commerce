@@ -10,8 +10,8 @@
 			android:supportsRtl="true"
 			android:theme="@style/AppTheme">
 		<activity
-				android:name=".view.activities.HomeActivity"
-				android:label="@string/title_activity_home"
+				android:name=".view.activities.ProductActivity"
+				android:label="@string/title_activity_product"
 				android:theme="@style/AppTheme.NoActionBar">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
@@ -19,12 +19,19 @@
 				<category android:name="android.intent.category.LAUNCHER"/>
 			</intent-filter>
 		</activity>
+		<activity
+				android:name=".view.activities.HomeActivity"
+				android:label="@string/title_activity_home"
+				android:theme="@style/AppTheme.NoActionBar">
+			
+		</activity>
 		<activity android:name=".view.activities.LoginSignUp">
-			<!--<intent-filter>-->
-				<!--<action android:name="android.intent.action.MAIN"/>-->
-				<!---->
-				<!--<category android:name="android.intent.category.LAUNCHER"/>-->
-			<!--</intent-filter>-->
+			
+			<!-- <intent-filter> -->
+			<!-- <action android:name="android.intent.action.MAIN"/> -->
+			<!--  -->
+			<!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+			<!-- </intent-filter> -->
 		</activity>
 	</application>
 
