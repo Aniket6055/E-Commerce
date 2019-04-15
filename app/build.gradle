@@ -36,6 +36,8 @@ dependencies {
     def lifecycle_version = "2.0.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
+    implementation 'com.github.polok:clicknumberpicker:0.1.2'
+
 
 
 }
