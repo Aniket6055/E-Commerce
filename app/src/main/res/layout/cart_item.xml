@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
 		android:orientation="vertical"
 		android:paddingBottom="@dimen/size_10_dp"
 		android:layout_width="match_parent"
@@ -35,7 +36,7 @@
 			android:textStyle="bold"/>
 	
 	<com.demo.ecommerceapp.view.customviews.textview.LatoBoldtextView
-			android:text="94,000"
+			android:text="₹ 94,000"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:id="@+id/latoBoldtextView"
@@ -49,35 +50,65 @@
 			app:layout_constraintHorizontal_bias="0.0"/>
 	
 	
-	<pl.polak.clicknumberpicker.ClickNumberPickerView
+	<LinearLayout
 			android:layout_width="100dp"
-			android:layout_height="@dimen/size_35_dp"
-			app:picker_corner_radius="10"
-			app:pickers_background_color="@color/colorPrimary"
-			app:swipe_enabled="false"
+			android:background="@drawable/layout_number_picker_back"
+			android:layout_height="24dp"
+			android:orientation="horizontal"
+			app:layout_constraintStart_toStartOf="@+id/latoBoldtextView"
+			android:layout_marginTop="12dp"
 			app:layout_constraintTop_toBottomOf="@+id/latoBoldtextView"
-			app:layout_constraintStart_toEndOf="@+id/imageView2"
-			app:value_background_color="@color/white"
-			app:value_text_color="@android:color/black"
-			android:layout_marginStart="8dp"
-			android:layout_marginTop="8dp"
-			android:layout_marginBottom="@dimen/size_10_dp"
-			android:id="@+id/clickNumberPickerView"/>
+			android:id="@+id/linearLayout">
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:id="@+id/tvMinus"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:background="@color/colorAccent"
+				android:textColor="@color/white"
+				android:textSize="@dimen/size_18_sp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textStyle="bold"
+				android:text="-"/>
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:id="@+id/tvQuantity"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:paddingLeft="@dimen/size_3_dp"
+				android:paddingRight="@dimen/size_3_dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/size_16_sp"
+				android:text="0"/>
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:id="@+id/tvPlus"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:textStyle="bold"
+				android:background="@color/colorAccent"
+				android:textColor="@color/white"
+				android:textSize="@dimen/size_18_sp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="+"/>
+	
+	
+	</LinearLayout>
+	
 	
 	<ImageView
-			android:layout_width="20dp"
-			android:layout_height="20dp"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
 			app:srcCompat="@drawable/ic_delete"
-			android:tint="@color/black"
+			android:tint="@color/grey"
 			android:id="@+id/imageView3"
-			app:layout_constraintStart_toEndOf="@+id/clickNumberPickerView"
+			app:layout_constraintEnd_toEndOf="@+id/latoHeavyTextView"
+			app:layout_constraintStart_toEndOf="@+id/linearLayout"
 			android:layout_marginStart="8dp"
-			app:layout_constraintEnd_toEndOf="parent"
-			android:layout_marginEnd="8dp"
-			app:layout_constraintTop_toTopOf="@+id/clickNumberPickerView"
-			app:layout_constraintHorizontal_bias="0.942"
-			android:layout_marginBottom="8dp"
-			app:layout_constraintBottom_toBottomOf="@+id/clickNumberPickerView"
-			app:layout_constraintVertical_bias="1.0"/>
+			app:layout_constraintHorizontal_bias="1.0"
+			app:layout_constraintBottom_toBottomOf="@+id/linearLayout"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

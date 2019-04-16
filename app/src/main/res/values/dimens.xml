@@ -27,5 +27,7 @@
 	<dimen name="size_22_sp">22dp</dimen>
 	<dimen name="size_24_dp">24dp</dimen>
 	<dimen name="size_35_dp">35dp</dimen>
+	<dimen name="size_3_dp">3dp</dimen>
+	<dimen name="size_12_dp">12dp</dimen>
 
 </resources>

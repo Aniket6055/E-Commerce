@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".view.activities.AddressActivity">
+	
+	<Button
+			android:id="@+id/btnAddAddress"
+			android:text="Add Address"
+			android:textAllCaps="false"
+			android:background="@color/black"
+			android:layout_margin="@dimen/size_10_dp"
+			android:textColor="@color/white"
+			android:textSize="@dimen/size_18_sp"
+			android:textStyle="bold"
+			android:layout_alignParentTop="true"
+			android:layout_width="match_parent"
+			android:layout_height="55dp"/>
+	
+	
+	<androidx.recyclerview.widget.RecyclerView
+			android:layout_below="@+id/btnAddAddress"
+			android:layout_above="@+id/btnAddressContinue"
+			android:id="@+id/rvAddressList"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+	
+	
+	<Button
+			android:id="@+id/btnAddressContinue"
+			android:text="Continue"
+			android:textAllCaps="false"
+			android:background="@color/colorAccent"
+			android:textColor="@color/white"
+			android:textSize="@dimen/size_18_sp"
+			android:textStyle="bold"
+			android:layout_alignParentBottom="true"
+			android:layout_width="match_parent"
+			android:layout_height="55dp"/>
+
+</RelativeLayout>

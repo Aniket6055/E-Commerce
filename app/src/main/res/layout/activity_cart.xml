@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context=".view.activities.CartActivity">
+	
+	
+	<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/rvCartList"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+	
+	<RelativeLayout
+			android:id="@+id/totalLayout"
+			android:layout_below="@+id/rvCartList"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="@dimen/size_16_dp"
+			android:layout_marginRight="@dimen/size_16_dp"
+			android:layout_marginTop="@dimen/size_8_dp"
+			android:layout_marginBottom="@dimen/size_8_dp"
+			android:layout_height="wrap_content">
+		
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Total "
+				android:layout_alignParentLeft="true"
+				android:textSize="@dimen/size_18_sp"
+				android:textColor="@color/black"/>
+		
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="94,000 "
+				android:layout_alignParentRight="true"
+				android:textSize="@dimen/size_20_dp"
+				android:textColor="@color/black"/>
+		
+	</RelativeLayout>
+	
+	<RelativeLayout
+			android:id="@+id/deliveryLayout"
+			android:layout_below="@+id/totalLayout"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="@dimen/size_16_dp"
+			android:layout_marginRight="@dimen/size_16_dp"
+			android:layout_marginBottom="@dimen/size_8_dp"
+			android:layout_height="wrap_content">
+		
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Delivery "
+				android:layout_alignParentLeft="true"
+				android:textSize="@dimen/size_18_sp"
+				android:textColor="@color/black"/>
+		
+		
+		<com.demo.ecommerceapp.view.customviews.textview.LatoHeavyTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Free"
+				android:layout_alignParentRight="true"
+				android:textSize="@dimen/size_20_dp"
+				android:textColor="@color/colorAccent"/>
+	
+	</RelativeLayout>
+	
+	
+	<LinearLayout
+			android:gravity="center_vertical"
+			android:id="@+id/promoCodeLayout"
+			android:layout_below="@+id/deliveryLayout"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="@dimen/size_16_dp"
+			android:layout_marginRight="@dimen/size_16_dp"
+			android:layout_marginBottom="@dimen/size_8_dp"
+			android:layout_height="wrap_content">
+		
+		
+		<com.demo.ecommerceapp.view.customviews.editetxt.LatoHeavyEditText
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:hint="Enter Voucher code"
+				android:layout_weight="1"
+				android:padding="@dimen/size_8_dp"
+				android:layout_marginRight="@dimen/size_5_dp"
+				android:background="@drawable/et_promo_back"
+				android:layout_alignParentLeft="true"
+				android:textSize="@dimen/size_16_dp"
+				android:textColor="@color/black"/>
+		
+		
+		<Button
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:text="Apply"
+				android:padding="@dimen/size_5_dp"
+				android:background="@drawable/btn_back_accent"
+				android:layout_alignParentRight="true"
+				android:textSize="@dimen/size_14_dp"
+				android:textColor="@color/white"/>
+	
+	</LinearLayout>
+	
+	
+	<Button
+			android:id="@+id/btnCartContinue"
+			android:text="Continue"
+			android:textAllCaps="false"
+			android:background="@color/colorAccent"
+			android:textColor="@color/white"
+			android:textSize="@dimen/size_18_sp"
+			android:textStyle="bold"
+			android:layout_alignParentBottom="true"
+			android:layout_width="match_parent"
+			android:layout_height="55dp"/>
+
+</RelativeLayout>
