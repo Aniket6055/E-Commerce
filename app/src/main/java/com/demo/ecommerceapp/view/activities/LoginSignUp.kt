@@ -1,5 +1,6 @@
 package com.demo.ecommerceapp.view.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -31,6 +32,10 @@ class LoginSignUp : AppCompatActivity() {
                 tvOr.visibility = View.VISIBLE
                 relativeFacebook.visibility = View.VISIBLE
             }
+        }
+
+        relativeFacebook.setOnClickListener{view ->
+            startActivity(Intent(this,HomeActivity::class.java))
         }
     }
 }

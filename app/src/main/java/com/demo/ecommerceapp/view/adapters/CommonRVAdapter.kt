@@ -1,12 +1,14 @@
 package com.demo.ecommerceapp.view.adapters
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.demo.ecommerceapp.R
+import com.demo.ecommerceapp.view.activities.ProductActivity
 import kotlinx.android.synthetic.main.best_in_mobile_item.view.*
 
 class CommonRVAdapter(private val items: List<String>, val context: Context) :
@@ -23,7 +25,7 @@ class CommonRVAdapter(private val items: List<String>, val context: Context) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.productName.text = "I phone X"
         holder.mainLayout.setOnClickListener {
-            Toast.makeText(context,"Clicked "+position,Toast.LENGTH_LONG).show()
+            context.startActivity(ProductActivity.getIntent(context))
         }
     }
 

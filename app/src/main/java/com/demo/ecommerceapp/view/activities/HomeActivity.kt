@@ -49,7 +49,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun addHomeFragment() {
-        var homeFragment = ListingFragment()
+        var homeFragment = HomeFragment()
         var fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.mainContent, homeFragment)
         fragmentTransaction.commit()

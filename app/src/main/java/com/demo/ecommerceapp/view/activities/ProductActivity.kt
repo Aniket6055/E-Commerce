@@ -1,5 +1,7 @@
 package com.demo.ecommerceapp.view.activities
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -124,4 +126,12 @@ class ProductActivity : AppCompatActivity() {
             else -> return super.onOptionsItemSelected(item)
         }
     }
+
+    companion object {
+        fun getIntent(mContext :Context) : Intent{
+            return Intent(mContext,ProductActivity::class.java)
+        }
+    }
+
+
 }
