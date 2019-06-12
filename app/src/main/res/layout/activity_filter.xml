@@ -7,10 +7,15 @@
 		tools:context=".view.activities.FilterActivity">
 	
 	<androidx.recyclerview.widget.RecyclerView
-			android:layout_weight="0.9"
+			android:layout_weight="1.1"
 			android:id="@+id/categoryRv"
 			android:layout_width="0dp"
 			android:layout_height="match_parent"/>
+	
+	<View
+			android:layout_width="0.5dp"
+			android:layout_height="match_parent"
+			android:background="@color/grey"/>
 	
 	<androidx.recyclerview.widget.RecyclerView
 			android:layout_weight="2"

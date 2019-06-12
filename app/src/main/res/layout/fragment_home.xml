@@ -51,7 +51,7 @@
 					android:textColor="@color/black"/>
 			
 			<com.demo.ecommerceapp.view.customviews.textview.LatoSemiboldTextView
-					android:id="@+id/trendingMobileSeemore"
+					android:id="@+id/trendingMobileSeeMore"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentRight="true"
@@ -89,7 +89,7 @@
 					android:textColor="@color/black"/>
 			
 			<com.demo.ecommerceapp.view.customviews.textview.LatoSemiboldTextView
-					android:id="@+id/trendingElectronicsSeemore"
+					android:id="@+id/trendingElectronicsSeeMore"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentRight="true"
@@ -128,7 +128,7 @@
 					android:textColor="@color/black"/>
 			
 			<com.demo.ecommerceapp.view.customviews.textview.LatoSemiboldTextView
-					android:id="@+id/bestOffersSeemore"
+					android:id="@+id/bestOffersSeeMore"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_alignParentRight="true"
