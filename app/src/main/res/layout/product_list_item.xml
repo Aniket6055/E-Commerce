@@ -6,6 +6,7 @@
 		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:layout_marginBottom="@dimen/size_10_dp"
 		android:id="@+id/listingItemMainLayout">
 	
 	<ImageView

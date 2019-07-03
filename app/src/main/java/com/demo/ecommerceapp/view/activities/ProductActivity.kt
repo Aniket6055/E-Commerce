@@ -128,8 +128,10 @@ class ProductActivity : AppCompatActivity() {
     }
 
     companion object {
-        fun getIntent(mContext :Context) : Intent{
-            return Intent(mContext,ProductActivity::class.java)
+        fun getIntent(mContext: Context): Intent {
+            val intent = Intent(mContext, ProductActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            return intent
         }
     }
 

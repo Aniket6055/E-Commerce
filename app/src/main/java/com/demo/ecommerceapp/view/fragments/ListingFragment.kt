@@ -1,18 +1,17 @@
 package com.demo.ecommerceapp.view.fragments
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
 import com.demo.ecommerceapp.R
-import com.demo.ecommerceapp.view.adapters.CommonRVAdapter
 import com.demo.ecommerceapp.view.adapters.ProductListingRVAdapter
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -54,6 +53,11 @@ class ListingFragment : Fragment() {
         layoutManager.reverseLayout = false
         rvProductListing.layoutManager = layoutManager
         rvProductListing.adapter = ProductListingRVAdapter(getProducts(), activity!!.baseContext)
+        val dividerItemDecoration = DividerItemDecoration(
+            rvProductListing.context,
+            layoutManager.orientation
+        )
+        rvProductListing.addItemDecoration(dividerItemDecoration)
         return view
     }
 
